@@ -18,8 +18,22 @@ public class App {
 		System.out.println("Quantity in stock: ");
 		product.quantity = sc.nextInt();
 		
-		System.out.println(product.name + ", " +product.price + ", " +product.quantity + ", ");
+		System.out.println( "Product data: "+ product);
 		
+		System.out.println();
+		System.out.println("Enter the number of products to be added in stock: ");
+		int quantity = sc.nextInt();
+		product.addProducts(quantity);//atualiza a quantidade do objeto product
+		System.out.println();
+		System.out.println( "Updated data: "+ product);
+		
+		System.out.println();
+		System.out.println("Enter the number of products to be removed from stock: ");
+		quantity = sc.nextInt();
+		product.removeProducts(quantity);//atualiza a quantidade do objeto product
+		System.out.println();
+		System.out.println( "Updated data: "+ product);
+
 		sc.close();
 	}
 

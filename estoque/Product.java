@@ -16,5 +16,9 @@ public class Product { //atributos
 	public void removeProducts(int quantity) { //remoção de produtos no estoque
 		this.quantity -= quantity;
 	}
+	
+	public String toString() {// Converte objeto para String
+		return name + ", $ " + price + ", " + quantity + " units, Total: $ " + totalValueInStock();
+	}
 }
 
